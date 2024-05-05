@@ -11,4 +11,15 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("plugins.setup")
+
+-- Merge all plugin files 
+-- TODO: Automatically detect these
+local plugins = {}
+for k,v in pairs(require("plugins.visual")) do
+    table.insert(plugins, v)
+end 
+for k,v in pairs(require("plugins.development")) do
+    table.insert(plugins, v)
+end 
+
+require("lazy").setup(plugins)

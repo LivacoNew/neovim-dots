@@ -1,4 +1,4 @@
-require("lazy").setup({
+return {
     -- Oxocarbon Color Scheme
     -- https://github.com/nyoom-engineering/oxocarbon.nvim
 	{ 
@@ -24,24 +24,4 @@ require("lazy").setup({
             -- refer to the configuration section below
         }
     },
-
-    -- Lazygit.nvim for git management
-    -- https://github.com/kdheepak/lazygit.nvim
-    {
-        "kdheepak/lazygit.nvim",
-        event = "VeryLazy",
-    	cmd = {
-    		"LazyGit",
-    		"LazyGitConfig",
-    		"LazyGitCurrentFile",
-    		"LazyGitFilter",
-    		"LazyGitFilterCurrentFile",
-    	},
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-        },
-        keys = {
-           { "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
-        }
-    },
-})
+}
