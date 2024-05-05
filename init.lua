@@ -13,11 +13,9 @@ require("plugins")
 -- Colorscheme
 vim.opt.background = "dark"
 vim.cmd("colorscheme oxocarbon")
+vim.api.nvim_set_hl(0, "NvimTreeNormal", {fg = "#FFFFFF", bg = "#101010"})
 
 -- Vim settings
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 vim.opt.relativenumber = true
 vim.opt.number = false
 vim.opt.expandtab = true
