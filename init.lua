@@ -23,8 +23,12 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.clipboard = "unnamedplus"
+vim.opt.cmdheight=0
 
 -- Keybindings
 vim.keymap.set("i", "<C-BS>", "<C-W>") -- CTRL + Backspace
 
-print(string.format("Loaded in %.4f seconds.", (os.clock() - load_start)))
+local startup_time = os.clock() - load_start
+if startup_time > 0.5 then
+    print(string.format("Warning: Slow load time, loaded in %.4f seconds.", startup_time))
+end
