@@ -24,6 +24,7 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.clipboard = "unnamedplus"
 vim.opt.cmdheight=0
+vim.opt.scrolloff=999
 
 -- Keybindings
 vim.keymap.set("i", "<C-BS>", "<C-W>") -- CTRL + Backspace
