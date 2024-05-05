@@ -25,6 +25,7 @@ return {
                     icons_enabled = true,
                     theme = 'codedark',
                     component_separators = { left = '|', right = '|'},
+                    disabled_filetypes = { 'packer', 'NvimTree' } -- Credit: https://www.reddit.com/r/neovim/comments/tth9qh/comment/i2y69mv/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
                 }
             })
         end 
