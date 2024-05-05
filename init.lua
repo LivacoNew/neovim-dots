@@ -1,4 +1,13 @@
 local load_start = os.clock()
+
+-- Required for nvim-tree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.opt.termguicolors = true
+
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 require("plugins")
 
 -- Colorscheme
