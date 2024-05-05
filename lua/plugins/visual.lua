@@ -24,4 +24,20 @@ return {
             -- refer to the configuration section below
         }
     },
+
+    -- Lua Line, Status Bar
+    -- https://github.com/nvim-lualine/lualine.nvim
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        config = function() 
+            require("lualine").setup({
+                options = {
+                    icons_enabled = true,
+                    theme = 'codedark',
+                    component_separators = { left = '|', right = '|'},
+                }
+            })
+        end 
+    }
 }
