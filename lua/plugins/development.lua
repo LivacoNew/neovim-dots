@@ -36,5 +36,23 @@ return {
             { "<leader>fb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Fuzzy Find in Buffer"},
             { "<leader>fv", "<cmd>Telescope buffers<cr>", desc = "Find Buffer"},
         }
+    },
+
+    -- Comment.nvim to comment out lines fast
+    -- https://github.com/numToStr/Comment.nvim
+    {
+        'numToStr/Comment.nvim',
+        config = function()
+            -- Tried setting the binds in opt but just couldn't get them to work for some reason
+            vim.keymap.set("n", "<leader>/", function()
+                require("Comment.api").toggle.linewise.count(vim.v.count)
+            end, {desc = "Toggle comment."})
+
+            vim.keymap.set("n", "<leader>?", function()
+                require("Comment.api").toggle.blockwise.count(vim.v.count)
+            end, {desc = "Toggle block comment."})
+            require('Comment').setup()
+        end, 
+        lazy = false,
     }
 }
