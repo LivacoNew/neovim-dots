@@ -1,7 +1,7 @@
 return {
     -- Oxocarbon Color Scheme
     -- https://github.com/nyoom-engineering/oxocarbon.nvim
-	{"nyoom-engineering/oxocarbon.nvim"}, 
+	{"nyoom-engineering/oxocarbon.nvim"},
 
     -- WhichKey for when I forget what i've bound
     -- https://github.com/folke/which-key.nvim

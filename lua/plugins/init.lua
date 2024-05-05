@@ -21,5 +21,8 @@ end
 for k,v in pairs(require("plugins.development")) do
     table.insert(plugins, v)
 end 
+for k,v in pairs(require("plugins.lsp")) do
+    table.insert(plugins, v)
+end 
 
 require("lazy").setup(plugins)

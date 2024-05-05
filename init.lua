@@ -29,6 +29,9 @@ vim.opt.scrolloff=999
 -- Keybindings
 vim.keymap.set("i", "<C-BS>", "<C-W>") -- CTRL + Backspace
 
+-- Load other modules
+require("core")
+
 local startup_time = os.clock() - load_start
 if startup_time > 0.5 then
     print(string.format("Warning: Slow load time, loaded in %.4f seconds.", startup_time))
