@@ -22,6 +22,7 @@ end
 
 define_lsp("omnisharp", {})
 define_lsp("lua_ls", {})
+define_lsp("rust_analyzer", {})
 
 --     NOW STOP      --
 setup()
