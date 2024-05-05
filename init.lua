@@ -17,6 +17,4 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.clipboard = "unnamedplus"
 
-local wk = require("which-key")
-
 print(string.format("Loaded in %.4f seconds.", (os.clock() - load_start)))

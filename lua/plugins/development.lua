@@ -16,6 +16,12 @@ return {
         },
         keys = {
            { "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
-        }
+        },
+        config = function()
+            local wk = require("which-key")
+            wk.register({
+                ["<leader>gg"] = {"<cmd>LazyGit<cr>", "LazyGit"}
+            })
+        end
     },
 }
