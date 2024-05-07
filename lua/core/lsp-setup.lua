@@ -51,4 +51,8 @@ require("cmp").setup({
         { name = 'buffer' },
     })
 })
---local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+-- Key bindings 
+vim.keymap.set("n", "<leader>la", function()
+    vim.lsp.buf.code_action()
+end, {desc = "LSP Action."})
