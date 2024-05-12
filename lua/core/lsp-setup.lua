@@ -24,6 +24,7 @@ define_lsp("omnisharp", {})
 define_lsp("lua_ls", {})
 define_lsp("rust_analyzer", {})
 define_lsp("pyright", {})
+define_lsp("intelephense", {})
 
 --     NOW STOP      --
 setup()
