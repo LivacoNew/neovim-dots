@@ -12,3 +12,5 @@ nvim
 ```
 Let Lazy and Mason update their stuff and you're good.
 
+## Roadmap
+- Better CTRL + Arrow Keys, as it's a bit finicky rn
