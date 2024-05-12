@@ -26,6 +26,17 @@ return {
                     theme = 'codedark',
                     component_separators = { left = '|', right = '|'},
                     disabled_filetypes = { 'packer', 'NvimTree' } -- Credit: https://www.reddit.com/r/neovim/comments/tth9qh/comment/i2y69mv/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+                },
+                sections = {
+                    lualine_c = {function() 
+                        -- Credit: https://www.reddit.com/r/neovim/comments/xy0tu1/comment/irfegvd/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+                        local recording_register = vim.fn.reg_recording()
+                        if recording_register == "" then
+                            return ""
+                        else
+                            return "Recording @" .. recording_register
+                        end
+                    end}
                 }
             })
         end 
