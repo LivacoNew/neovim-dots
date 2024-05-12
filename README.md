@@ -18,6 +18,5 @@ Let Lazy and Mason update their stuff and you're good.
 - PHP comment hotkey support
 - Find and replace
 - Auto-Detect all plugin lua files for easy adding
-- Greeter
 - Macro recording status bar section
 - Buffer list at the top
