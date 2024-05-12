@@ -23,6 +23,7 @@ end
 define_lsp("omnisharp", {})
 define_lsp("lua_ls", {})
 define_lsp("rust_analyzer", {})
+define_lsp("pyright", {})
 
 --     NOW STOP      --
 setup()
@@ -56,3 +57,6 @@ require("cmp").setup({
 vim.keymap.set("n", "<leader>la", function()
     vim.lsp.buf.code_action()
 end, {desc = "LSP Action."})
+vim.keymap.set("n", "<leader>lr", function()
+    vim.lsp.buf.rename()
+end, {desc = "LSP Rename."})
