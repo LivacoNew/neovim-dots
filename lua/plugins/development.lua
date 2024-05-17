@@ -45,12 +45,13 @@ return {
         config = function()
             -- Tried setting the binds in opt but just couldn't get them to work for some reason
             vim.keymap.set("n", "<leader>/", function()
-                require("Comment.api").toggle.linewise.count(vim.v.count)
+                require("Comment.api").toggle.linewise.count(math.max(1, vim.v.count))
             end, {desc = "Toggle comment."})
 
             vim.keymap.set("n", "<leader>?", function()
-                require("Comment.api").toggle.blockwise.count(vim.v.count)
+                require("Comment.api").toggle.blockwise.count(math.max(1, vim.v.count))
             end, {desc = "Toggle block comment."})
+
             require('Comment').setup()
         end, 
         lazy = false,
