@@ -19,3 +19,4 @@ Let Lazy and Mason update their stuff and you're good.
 - Find and replace
 - Auto-Detect all plugin lua files for easy adding
 - Buffer list at the top
+- Auto close () {} and other stuff
