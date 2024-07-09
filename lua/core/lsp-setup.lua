@@ -22,7 +22,15 @@ end
 
 define_lsp("omnisharp", {})
 define_lsp("lua_ls", {})
-define_lsp("rust_analyzer", {})
+define_lsp("rust_analyzer", {
+    settings = {
+        ["rust-analyzer"] = {
+            checkOnSave = {
+                command = "clippy"
+            }
+        }
+    }
+})
 define_lsp("pyright", {})
 define_lsp("intelephense", {})
 
