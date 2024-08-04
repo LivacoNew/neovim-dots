@@ -1,5 +1,5 @@
 # NeoVim Dotfiles
-My personal NeoVim config.
+My personal, barely working, NeoVim config.
 ![Preview of the configuration.](https://i.imgur.com/dnjWmBs.png)
 
 ## Install
@@ -12,7 +12,7 @@ nvim
 ```
 Let Lazy and Mason update their stuff and you're good.
 
-## Roadmap
+## Still that's To-Do but I've been too lazy to do
 - Better CTRL + Arrow Keys, as it's a bit finicky rn
 - TreeSitter for syntax highlighting.
 - PHP comment hotkey support
