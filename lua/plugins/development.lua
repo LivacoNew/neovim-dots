@@ -31,10 +31,10 @@ return {
         'nvim-telescope/telescope.nvim', tag = '0.1.6',
         dependencies = { 'nvim-lua/plenary.nvim' },
         keys = {
-            { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find File"},
-            { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Fuzzy Find"},
-            { "<leader>fb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Fuzzy Find in Buffer"},
-            { "<leader>fv", "<cmd>Telescope buffers<cr>", desc = "Find Buffer"},
+            { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find File" },
+            { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Fuzzy Find" },
+            { "<leader>fb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Fuzzy Find in Buffer" },
+            { "<leader>fv", "<cmd>Telescope buffers<cr>", desc = "Find Buffer" },
         }
     },
 
@@ -55,5 +55,15 @@ return {
             require('Comment').setup()
         end, 
         lazy = false,
+    },
+
+    -- Spectre for finding/replacing easily
+    {
+        "nvim-pack/nvim-spectre",
+        keys = {
+            { "<leader>ss", "<cmd>lua require('spectre').toggle()<cr>", desc = "Toggle Spectre" },
+            { "<leader>sw", "<cmd>lua require('spectre').open_file_search({select_word=false})<cr>", desc = "Search current with file." },
+        },
+        lazy = false
     }
 }
