@@ -33,6 +33,7 @@ define_lsp("rust_analyzer", {
 })
 define_lsp("pyright", {})
 define_lsp("intelephense", {})
+define_lsp("jdtls", {})
 
 --     NOW STOP      --
 setup()
