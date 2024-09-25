@@ -33,6 +33,18 @@ define_lsp("rust_analyzer", {
 })
 define_lsp("pyright", {})
 define_lsp("intelephense", {})
+define_lsp("kotlin_language_server", {})
+define_lsp("taplo", {
+    settings = {
+        evenBetterToml = {
+            schema = {
+                associations = {
+                    ["CrabFetch/config\\.toml"] = os.execute("crabfetch -g")
+                }
+            }
+        }
+    }
+})
 
 --     NOW STOP      --
 setup()
