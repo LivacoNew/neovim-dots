@@ -45,6 +45,7 @@ define_lsp("taplo", {
         }
     }
 })
+define_lsp("jdtls", {})
 
 --     NOW STOP      --
 setup()
