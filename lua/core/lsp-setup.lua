@@ -87,3 +87,6 @@ end, {desc = "LSP Rename."})
 vim.keymap.set("n", "<leader>ld", function()
     vim.lsp.buf.declaration()
 end, {desc = "LSP Rename."})
+
+-- Type hints
+vim.lsp.inlay_hint.enable(true);
