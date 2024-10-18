@@ -47,7 +47,7 @@ define_lsp("taplo", {
 })
 define_lsp("jdtls", {})
 define_lsp("eslint", {})
-define_lsp("arduino-language-server", {})
+define_lsp("arduino_language_server", {})
 
 --     NOW STOP      --
 setup()
