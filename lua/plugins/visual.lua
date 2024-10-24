@@ -49,10 +49,10 @@ return {
         config = function()
             require("bufferline").setup({})
 
-            vim.keymap.set("n", "<leader>bd", function()
+            vim.keymap.set("n", "<leader>]", function()
                 vim.cmd("bnext")
             end, {desc = "Next Buffer."})
-            vim.keymap.set("n", "<leader>ba", function()
+            vim.keymap.set("n", "<leader>[", function()
                 vim.cmd("bprev")
             end, {desc = "Previous Buffer."})
         end,
