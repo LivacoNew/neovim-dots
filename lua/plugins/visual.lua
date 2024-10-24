@@ -42,6 +42,22 @@ return {
         end 
     },
 
+    {
+        'akinsho/bufferline.nvim', 
+        version = "*", 
+        dependencies = 'nvim-tree/nvim-web-devicons',
+        config = function()
+            require("bufferline").setup({})
+
+            vim.keymap.set("n", "<leader>bd", function()
+                vim.cmd("bnext")
+            end, {desc = "Next Buffer."})
+            vim.keymap.set("n", "<leader>ba", function()
+                vim.cmd("bprev")
+            end, {desc = "Previous Buffer."})
+        end,
+    },
+
     -- Nvim-tree, file explorer
     -- https://github.com/nvim-tree/nvim-tree.lua
     {
