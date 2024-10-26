@@ -49,12 +49,16 @@ return {
         config = function()
             require("bufferline").setup({})
 
-            vim.keymap.set("n", "<leader>]", function()
+            vim.keymap.set("n", "]", function()
                 vim.cmd("bnext")
             end, {desc = "Next Buffer."})
-            vim.keymap.set("n", "<leader>[", function()
+            vim.keymap.set("n", "[", function()
                 vim.cmd("bprev")
             end, {desc = "Previous Buffer."})
+            vim.keymap.set("n", "<leader>bc", function()
+                vim.cmd("bdelete")
+                vim.cmd("bnext")
+            end, {desc = "Close Buffer."})
         end,
     },
 
