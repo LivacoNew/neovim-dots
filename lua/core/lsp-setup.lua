@@ -34,6 +34,21 @@ define_lsp("rust_analyzer", {
 define_lsp("pyright", {})
 define_lsp("intelephense", {})
 define_lsp("jdtls", {})
+define_lsp("kotlin_language_server", {})
+define_lsp("taplo", {
+    settings = {
+        evenBetterToml = {
+            schema = {
+                associations = {
+                    ["CrabFetch/config\\.toml"] = os.execute("crabfetch -g")
+                }
+            }
+        }
+    }
+})
+define_lsp("jdtls", {})
+define_lsp("eslint", {})
+define_lsp("arduino_language_server", {})
 
 --     NOW STOP      --
 setup()
@@ -73,3 +88,6 @@ end, {desc = "LSP Rename."})
 vim.keymap.set("n", "<leader>ld", function()
     vim.lsp.buf.declaration()
 end, {desc = "LSP Rename."})
+
+-- Type hints
+vim.lsp.inlay_hint.enable(true);
