@@ -36,3 +36,9 @@ local startup_time = os.clock() - load_start
 if startup_time > 0.5 then
     print(string.format("Warning: Slow load time, loaded in %.4f seconds.", startup_time))
 end
+
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank({ timeout = 200 })
+  end,
+})
