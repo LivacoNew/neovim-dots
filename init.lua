@@ -28,6 +28,9 @@ vim.opt.scrolloff=999
 
 -- Keybindings
 vim.keymap.set("i", "<C-BS>", "<C-W>") -- CTRL + Backspace
+vim.keymap.set("n", "<leader>jf", function()
+	vim.cmd("%!jq '.'")
+end)
 
 -- Load other modules
 require("core")
