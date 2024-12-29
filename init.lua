@@ -42,3 +42,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank({ timeout = 200 })
   end,
 })
+
+-- Thanks https://www.reddit.com/r/neovim/comments/1ciobdk/how_to_resize_window_more_fluidly/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+vim.keymap.set("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
+vim.keymap.set("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
+vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
+vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
+
