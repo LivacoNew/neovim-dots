@@ -18,7 +18,7 @@ vim.api.nvim_set_hl(0, "NvimTreeNormal", {fg = "#FFFFFF", bg = "#101010"})
 -- Vim settings
 vim.opt.relativenumber = true
 vim.opt.number = true
-vim.opt.expandtab = true
+vim.opt.expandtab = false
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
