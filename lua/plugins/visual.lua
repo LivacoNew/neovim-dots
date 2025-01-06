@@ -134,5 +134,17 @@ return {
 
             require('alpha').setup(dashboard.config)
         end
-    };
+    },
+	{
+		"chentoast/marks.nvim",
+		opts = {},
+		config = function()
+			require("marks").setup({
+				mappings = {
+					set_next = "m;",
+					delete_line = "m/"
+				}
+			})
+		end
+	}
 }
