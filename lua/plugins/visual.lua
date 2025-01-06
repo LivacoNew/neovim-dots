@@ -12,6 +12,13 @@ return {
             vim.o.timeout = true
             vim.o.timeoutlen = 300
         end,
+		config = function()
+			require("which-key").setup({
+				triggers_blacklist = {
+					n = {"d", "y"}
+				}
+			})
+		end
     },
 
     -- Lua Line, Status Bar
@@ -148,6 +155,15 @@ return {
 					delete_line = "m/"
 				}
 			})
+		end
+	},
+
+	-- modes.nvim for highlighting lines with fancy colors
+	-- https://github.com/mvllow/modes.nvim
+	{
+		"mvllow/modes.nvim",
+		config = function()
+			require("modes").setup()
 		end
 	}
 }
