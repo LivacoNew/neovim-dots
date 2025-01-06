@@ -135,6 +135,9 @@ return {
             require('alpha').setup(dashboard.config)
         end
     },
+
+	-- marks.nvim for marking lines 
+	-- https://github.com/chentoast/marks.nvim
 	{
 		"chentoast/marks.nvim",
 		opts = {},
