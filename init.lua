@@ -52,3 +52,9 @@ vim.keymap.set("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window 
 vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
 vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
 
+vim.keymap.set("n", "<leader>rp", function()
+	-- https://www.reddit.com/r/neovim/comments/10fzpfi/comment/j50hr5b/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+	local filePath = vim.fn.expand("%:.")
+	local lineNumber = vim.fn.line(".")
+	vim.fn.setreg("+", filePath .. ":" .. lineNumber)
+end, { desc = "Copy file name and line number." })
