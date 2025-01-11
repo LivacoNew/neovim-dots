@@ -163,7 +163,20 @@ return {
 	{
 		"mvllow/modes.nvim",
 		config = function()
-			require("modes").setup()
+			require("modes").setup({
+				colors = {
+					copy = "#f5c359",
+					delete = "#c75c6a",
+					insert = "#404040",
+					visual = "#b07fc7"
+				},
+				line_opacity = {
+					copy = 0.5,
+					delete = 0.5,
+					insert = 0.5,
+					visual = 0.5
+				}
+			})
 		end
 	}
 }
