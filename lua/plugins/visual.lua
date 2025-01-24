@@ -178,5 +178,14 @@ return {
 				}
 			})
 		end
+	},
+
+	-- numb.nvim to let me peek without moving to it 
+	-- https://github.com/nacro90/numb.nvim
+	{
+		'nacro90/numb.nvim',
+		config = function()
+			require('numb').setup()
+		end,
 	}
 }
