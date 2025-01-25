@@ -91,4 +91,4 @@ vim.keymap.set("n", "<leader>ld", function()
 end, {desc = "LSP Rename."})
 
 -- Type hints
-vim.lsp.inlay_hint.enable(true);
+vim.lsp.inlay_hint.enable(false);

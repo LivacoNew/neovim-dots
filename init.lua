@@ -32,6 +32,13 @@ vim.keymap.set("n", "<leader>jf", function()
 	vim.cmd("%!jq '.'")
 end)
 
+
+vim.filetype.add({
+	pattern = {
+		['.*%.blade%.php'] = 'blade',
+	}
+})
+
 -- Load other modules
 require("core")
 

@@ -35,5 +35,28 @@ return {
         version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
         -- install jsregexp (optional!).
         build = "make install_jsregexp"
-    }
+    },
+
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function()
+			local configs = require("nvim-treesitter.configs")
+			configs.setup({
+				highlight = {
+					enable = true,
+				},
+			})
+
+			local parsers = require("nvim-treesitter.parsers").get_parser_configs()
+			parsers.blade = {
+				install_info = {
+					url = "https://github.com/EmranMR/tree-sitter-blade",
+					files = {"src/parser.c"},
+					branch = "main",
+				},
+				filetype = "blade"
+			}
+		end
+	}
 }
