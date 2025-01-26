@@ -165,9 +165,9 @@ return {
 		config = function()
 			require("modes").setup({
 				colors = {
+					insert = "",
 					copy = "#f5c359",
 					delete = "#c75c6a",
-					insert = "#404040",
 					visual = "#b07fc7"
 				},
 				line_opacity = {
