@@ -50,6 +50,7 @@ define_lsp("jdtls", {})
 define_lsp("eslint", {})
 define_lsp("arduino_language_server", {})
 define_lsp("gdscript", {})
+define_lsp("texlab", {})
 
 --     NOW STOP      --
 setup()
