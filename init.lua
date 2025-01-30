@@ -65,3 +65,4 @@ vim.keymap.set("n", "<leader>rp", function()
 	local lineNumber = vim.fn.line(".")
 	vim.fn.setreg("+", filePath .. ":" .. lineNumber)
 end, { desc = "Copy file name and line number." })
+vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
