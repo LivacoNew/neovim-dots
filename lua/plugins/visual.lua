@@ -13,11 +13,7 @@ return {
             vim.o.timeoutlen = 300
         end,
 		config = function()
-			require("which-key").setup({
-				triggers_blacklist = {
-					n = {"d", "y"}
-				}
-			})
+			require("which-key").setup()
 		end
     },
 
