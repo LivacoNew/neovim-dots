@@ -8,12 +8,15 @@ vim.opt.termguicolors = true
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
+
 require("plugins")
 
 -- Colorscheme
 vim.opt.background = "dark"
 vim.cmd("colorscheme oxocarbon")
-vim.api.nvim_set_hl(0, "NvimTreeNormal", {fg = "#FFFFFF", bg = "#101010"})
+-- vim.api.nvim_set_hl(0, "NvimTreeNormal", {fg = "#FFFFFF", bg = "#101010"})
+vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", {fg = "#242424", bg = "#161616"})
 
 -- Vim settings
 vim.opt.relativenumber = true
@@ -65,4 +68,3 @@ vim.keymap.set("n", "<leader>rp", function()
 	local lineNumber = vim.fn.line(".")
 	vim.fn.setreg("+", filePath .. ":" .. lineNumber)
 end, { desc = "Copy file name and line number." })
-vim.opt.completeopt = {'menu', 'menuone', 'noselect'}

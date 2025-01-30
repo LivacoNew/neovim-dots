@@ -55,6 +55,7 @@ define_lsp("texlab", {})
 --     NOW STOP      --
 setup()
 
+
 -- Key bindings 
 vim.keymap.set("n", "<leader>la", function()
     vim.lsp.buf.code_action()
