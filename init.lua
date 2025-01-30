@@ -21,7 +21,7 @@ vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", {fg = "#242424", bg = "#161616"})
 -- Vim settings
 vim.opt.relativenumber = true
 vim.opt.number = true
-vim.opt.expandtab = false
+vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
