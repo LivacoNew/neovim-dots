@@ -183,5 +183,30 @@ return {
 		config = function()
 			require('numb').setup()
 		end,
-	}
+	},
+
+	-- nvim-colorizer 
+	-- https://github.com/norcalli/nvim-colorizer.lua
+	{
+		'norcalli/nvim-colorizer.lua',
+		config = function()
+			require('colorizer').setup({
+                ['*'] = {
+                    mode = 'foreground'
+                }
+            })
+		end,
+        keys = {
+            { "<leader>p", function()
+                -- "<cmd>ColorizerDetachFromBuffer<cr>"
+                -- "<cmd>ColorizerAttachToBuffer<cr>"
+                local colorizer = require('colorizer')
+                if colorizer.is_buffer_attached() then
+                    colorizer.detach_from_buffer()
+                else
+                    colorizer.attach_to_buffer()
+                end
+            end, desc = "Toggle Colorizer" },
+        }
+    }
 }
