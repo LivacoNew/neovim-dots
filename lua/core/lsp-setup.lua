@@ -51,6 +51,7 @@ define_lsp("eslint", {})
 define_lsp("arduino_language_server", {})
 define_lsp("gdscript", {})
 define_lsp("texlab", {})
+define_lsp("tailwindcss", {})
 
 --     NOW STOP      --
 setup()
