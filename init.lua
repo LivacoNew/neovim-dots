@@ -15,8 +15,17 @@ require("plugins")
 -- Colorscheme
 vim.opt.background = "dark"
 vim.cmd("colorscheme oxocarbon")
--- vim.api.nvim_set_hl(0, "NvimTreeNormal", {fg = "#FFFFFF", bg = "#101010"})
-vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", {fg = "#242424", bg = "#161616"})
+if os.getenv("TRANSPARENT_THEME") then
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NvimTreeNormal", {bg = "none"})
+    vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", {fg = "#242424", bg = "none"})
+    vim.api.nvim_set_hl(0, "LineNr", {bg = "none"})
+else 
+    -- vim.api.nvim_set_hl(0, "NvimTreeNormal", {fg = "#FFFFFF", bg = "#101010"})
+    vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", {fg = "#242424", bg = "#161616"})
+end
 
 -- Vim settings
 vim.opt.relativenumber = true
