@@ -52,6 +52,7 @@ define_lsp("arduino_language_server", {})
 define_lsp("gdscript", {})
 define_lsp("texlab", {})
 define_lsp("tailwindcss", {})
+define_lsp("clangd", {})
 
 --     NOW STOP      --
 setup()
