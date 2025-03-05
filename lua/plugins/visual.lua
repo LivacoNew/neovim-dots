@@ -46,8 +46,8 @@ return {
     },
 
     {
-        'akinsho/bufferline.nvim', 
-        version = "*", 
+        'akinsho/bufferline.nvim',
+        version = "*",
         dependencies = 'nvim-tree/nvim-web-devicons',
         config = function()
             require("bufferline").setup({})
@@ -208,5 +208,7 @@ return {
                 end
             end, desc = "Toggle Colorizer" },
         }
-    }
+    },
+
+    { 'danilamihailov/beacon.nvim' }
 }

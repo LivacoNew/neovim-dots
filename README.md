@@ -1,6 +1,6 @@
 # NeoVim Dotfiles
 My personal, barely working, NeoVim config.
-![Preview of the configuration.](https://i.imgur.com/dnjWmBs.png)
+![Preview of the configuration.](https://i.imgur.com/ODUynwe.png)
 
 ## Install
 ```
