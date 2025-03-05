@@ -22,6 +22,12 @@ if os.getenv("TRANSPARENT_THEME") then
     vim.api.nvim_set_hl(0, "NvimTreeNormal", {bg = "none"})
     vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", {fg = "#242424", bg = "none"})
     vim.api.nvim_set_hl(0, "LineNr", {bg = "none"})
+    vim.api.nvim_set_hl(0, "LineNrAbove", {bg = "none"})
+    vim.api.nvim_set_hl(0, "LineNrBelow", {bg = "none"})
+    vim.api.nvim_set_hl(0, "LineNrBelow", {bg = "none"})
+    vim.api.nvim_set_hl(0, "SignColumn", {bg = "none"})
+    vim.api.nvim_set_hl(0, "CursorLine", {bg = "none"})
+    vim.api.nvim_set_hl(0, "CursorLineNr", {bg = "none"})
 else 
     -- vim.api.nvim_set_hl(0, "NvimTreeNormal", {fg = "#FFFFFF", bg = "#101010"})
     vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", {fg = "#242424", bg = "#161616"})
